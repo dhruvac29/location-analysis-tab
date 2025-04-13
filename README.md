@@ -1,36 +1,126 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Real Estate Deal Management Application
+
+## Project Overview
+
+This application is a comprehensive real estate deal management platform designed to help investment professionals analyze property deals, tenant information, and market data. The application features a modern, responsive UI with intuitive navigation and data visualization components.
+
+![Real Estate Deal Management App](public/app-screenshot.png)
+
+## Key Features
+
+### Deal Overview Tab
+- Financial metrics with performance indicators
+- Market analysis with modern card layouts
+- Lease analysis with visual indicators for key metrics and risk factors
+
+### Tenant Insights Component
+- Detailed tenant analysis dashboard showing:
+  - Financial health indicators and credit ratings
+  - Stock performance visualization
+  - Lease risk analysis with renewal probability
+  - Recent news with sentiment analysis
+- Integration with external data sources (simulated)
+
+### Supply Pipeline Component
+- Visual pipeline of nearby developments
+- Filtering capabilities by submarket and status
+- Construction progress indicators and risk analysis
+- Card and table views for different analysis needs
+
+### PDF Export Functionality
+- Export deal data to PDF format
+- Structured reports matching the visual hierarchy of the UI
+- Inclusion of all key metrics and property details
+
+## Technical Implementation
+
+### Frontend Architecture
+- **Framework**: Next.js with React 18
+- **Styling**: Tailwind CSS for responsive design
+- **Components**: Modular component architecture with TypeScript interfaces
+- **UI Library**: Radix UI for accessible interactive elements
+- **Data Visualization**: Custom-built visualization components
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+- Node.js 18.0 or later
+- npm or yarn package manager
+
+### Installation
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clone the repository
+git clone <repository-url>
+
+# Navigate to the project directory
+cd location-analysis-tab
+
+# Install dependencies
+npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Running the Application
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+# Start the development server
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the application.
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```
+src/
+├── app/                  # Next.js app directory
+│   └── page.tsx          # Main application page with tab navigation
+├── components/           # React components
+│   ├── DealOverviewTab.tsx    # Deal overview component
+│   ├── LocationAnalysisTab.tsx # Location analysis component
+│   ├── SupplyPipeline.tsx     # Supply pipeline component
+│   └── TenantInsights.tsx     # Tenant insights component
+├── utils/                # Utility functions
+│   └── pdfExport.ts      # PDF export functionality
+public/                   # Static assets
+└── images/               # Image assets
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Design Philosophy
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The design follows modern UI principles with an emphasis on:
+- Clear information hierarchy and scannable content
+- Contextual color usage for status and performance indicators
+- Interactive elements with appropriate feedback mechanisms
+- Responsive layouts that work across device sizes
+- Accessibility considerations for keyboard navigation and screen readers
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+# Build for production
+npm run build
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Start production server
+npm start
+```
+
+For cloud deployment options:
+
+```bash
+# Deploy to Vercel
+npx vercel
+
+# Deploy to Netlify
+npx netlify deploy
+```
+
+## Future Enhancement Opportunities
+- Integration with real-time data APIs for tenant information
+- Advanced filtering and sorting capabilities for comparative analysis
+- Additional visualization options for financial metrics
+- Collaborative features for team-based deal analysis
+- Mobile-optimized views for on-the-go access
+
+## License
+MIT
